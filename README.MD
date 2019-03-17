@@ -2,6 +2,8 @@
 
 > use Singly linked list, language typescript, based on cocos-creator
 
+> 需要键盘控制（wasd）.
+
 [view>>](https://saber2pr.github.io/MyWeb/build/snake/build/web-mobile/)
 
 ```ts
