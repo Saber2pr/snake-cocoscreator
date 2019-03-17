@@ -2,7 +2,7 @@
  * @Author: saber2pr
  * @Date: 2019-03-17 19:00:58
  * @Last Modified by: saber2pr
- * @Last Modified time: 2019-03-17 19:38:21
+ * @Last Modified time: 2019-03-17 19:52:02
  */
 import { Snake, Front } from './Snake'
 
@@ -43,6 +43,7 @@ export default class NewClass extends cc.Component {
 
   onLoad() {
     this.snake = new Snake(...this.nodes)
+    this.score.string = String(this.snake.length)
     this.addKeyListener()
     this.createFood()
   }
