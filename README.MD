@@ -2,6 +2,8 @@
 
 > use Singly linked list, language typescript, based on cocos-creator
 
+[view>>](https://saber2pr.github.io/MyWeb/build/snake/build/web-mobile/)
+
 ```ts
 export type Front = 'left' | 'right' | 'up' | 'down'
 
