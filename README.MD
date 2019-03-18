@@ -12,19 +12,19 @@ export type Front = 'left' | 'right' | 'up' | 'down'
 export class Snake {
   constructor(...nodes: cc.Node[]) {
     this.foot = nodes.reduce(
-      (pre, node) => new List(node).set('pre')(pre),
-      null as List
+      (pre, node) => new ListNode(node).set('pre')(pre),
+      null as ListNode
     )
     this.step = this.foot.instance.getContentSize().width
   }
-  private get head(): List {
+  private get head(): ListNode {
     let current = this.foot
     while (current.pre) {
       current = current.pre
     }
     return current
   }
-  private foot: List
+  private foot: ListNode
   private step: number
   get length(): number {
     let index = 1
@@ -46,7 +46,7 @@ export class Snake {
     return this
   }
   eat(food: cc.Node) {
-    this.head.pre = new List(food)
+    this.head.pre = new ListNode(food)
   }
   private getNextPos(front: Front) {
     const p = this.head.instance.getPosition()
